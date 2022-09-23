@@ -8,6 +8,10 @@ Today lesson
 
 - Like action
 
+### Demo page
+
+[https://syamhaidar.github.io/react-wgs/](https://syamhaidar.github.io/react-wgs/)
+
 ## Script
 
 #### Comment.jsx
