@@ -8,7 +8,7 @@ Today lesson
 
 - Like action
 
-## Hooks
+## Script
 
 #### Comment.jsx
 
