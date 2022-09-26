@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Today lesson
 
-- Like action
+- Real Time Clock
 
 ### Demo page
 
@@ -14,31 +14,27 @@ Today lesson
 
 ## Script
 
-#### Comment.jsx
+#### RealTimeClock.jsx
 
 ```js
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const Like = () => {
-  const [like, setLike] = useState(0)
-  const handleLike = () => setLike((prevLike) => prevLike + 1) // when click like + 1
+const RealTimeClock = () => {
+  const [time, setTime] = useState('')
 
-  return (
-    <div onClick={handleLike} className="actions">
-      {/* if like !== 0 show total like */}
-      {!!like && <span>{like}</span>}
-      <span>Like</span>
-    </div>
-  )
+  useEffect(() => {
+    const timer = setInterval(() => {
+      // current time
+      const dateTime = new Date().toLocaleTimeString()
+      // change time every 1 second
+      setTime(dateTime)
+    }, 1000) // 1000 ms = 1 second
+
+    return () => clearInterval(timer)
+  }, [])
+
+  return <div>{time}</div>
 }
 
-const Comment = () => {
-  return (
-    <>
-      <Like />
-    </>
-  )
-}
-
-export default Comment
+export default RealTimeClock
 ```
