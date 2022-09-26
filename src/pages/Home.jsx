@@ -4,6 +4,7 @@ import Comment from '../components/Comment'
 import User from '../components/User'
 import TimerHooks from '../components/TimerHooks'
 import TimerClass from '../components/TimerClass'
+import RealTimeClock from '../components/RealTimeClock'
 
 // ---------------------------------------------------------------------
 
@@ -22,6 +23,16 @@ const Home = () => {
       />
 
       <Stack direction="column" spacing={2}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Real Time Clock
+            </Typography>
+            {/* RealTimeClock component */}
+            <RealTimeClock />
+          </CardContent>
+        </Card>
+
         <Card variant="outlined">
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
