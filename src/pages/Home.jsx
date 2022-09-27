@@ -5,6 +5,7 @@ import User from '../components/User'
 import TimerHooks from '../components/TimerHooks'
 import TimerClass from '../components/TimerClass'
 import RealTimeClock from '../components/RealTimeClock'
+import FormInput from '../components/FormInput'
 
 // ---------------------------------------------------------------------
 
@@ -23,6 +24,16 @@ const Home = () => {
       />
 
       <Stack direction="column" spacing={2}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Form Input
+            </Typography>
+            {/* FormInput component */}
+            <FormInput />
+          </CardContent>
+        </Card>
+
         <Card variant="outlined">
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
