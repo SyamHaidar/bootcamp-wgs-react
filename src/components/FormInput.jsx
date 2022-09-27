@@ -9,14 +9,9 @@ const FormInput = () => {
   // multiple value first name and last name
   const [value, setValue] = useState({ first: '', last: '' })
 
-  const handleFirst = (e) => {
-    // handle first name
-    setValue({ ...value, first: e.target.value })
-  }
-
-  const handleLast = (e) => {
-    // handle last name
-    setValue({ ...value, last: e.target.value })
+  const handleChange = (e) => {
+    // handle change by property name [e.target.name]
+    setValue({ ...value, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = (e) => {
@@ -32,8 +27,8 @@ const FormInput = () => {
       {/* form input */}
       <form onSubmit={handleSubmit}>
         <Stack direction="column" spacing={2} sx={{ marginTop: '12px' }}>
-          <TextField label="First Name" required value={value.first} onChange={handleFirst} />
-          <TextField label="Last Name" required value={value.last} onChange={handleLast} />
+          <TextField label="First Name" name="first" required value={value.first} onChange={handleChange} />
+          <TextField label="Last Name" name="last" required value={value.last} onChange={handleChange} />
           <Button type="submit" variant="contained">
             Submit
           </Button>
