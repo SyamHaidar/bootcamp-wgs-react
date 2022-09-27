@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Today lesson
 
-- Real Time Clock
+- Form Input
 
 ### Demo page
 
@@ -14,27 +14,32 @@ Today lesson
 
 ## Script
 
-#### RealTimeClock.jsx
+#### FormInput.jsx
+
+Example
 
 ```js
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-const RealTimeClock = () => {
-  const [time, setTime] = useState('')
+const FormInput = () => {
+  const [value, setValue] = useState('')
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      // current time
-      const dateTime = new Date().toLocaleTimeString()
-      // change time every 1 second
-      setTime(dateTime)
-    }, 1000) // 1000 ms = 1 second
+  const handleChange = (e) => {
+    setValue(e.target.value)
+  }
 
-    return () => clearInterval(timer)
-  }, [])
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    alert(`Data was input: ${value}`)
+  }
 
-  return <div>{time}</div>
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" placeholder="Name" value={value} onChange={handleChange} />
+      <button type="submit">Submit</button>
+    </form>
+  )
 }
 
-export default RealTimeClock
+export default FormInput
 ```
