@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Today lesson
 
-- Form Input
+- createRef()
 
 ### Demo page
 
@@ -19,54 +19,35 @@ Example
 #### UnsplashSearch.jsx
 
 ```js
-// service API
-import client from './client'
+import { createRef, useState, useEffect } from 'react'
 
-const UnsplashSearch = () => {
-  // seacrh value
-  const [search, setSearch] = useState('')
-  // image data
-  const [image, setImage] = useState([])
+const ImgCard = ({ image }) => {
+  const [span, setSpan] = useState(0)
 
-  const getSearch = async (str) => {
-    // get image data from unsplash / client
-    const { data } = await client.get('/search/photos', { params: { query: str } })
-    // fill image data from client get
-    setImage(data.results)
-  }
+  const imgRef = createRef()
 
-  const handleSearch = (e) => {
-    // when seacrh value change get search image
-    setSearch(e.target.value)
-    getSearch(e.target.value)
-  }
+  useEffect(() => {
+    const setSpans = () => {
+      const height = imgRef.current.clientHeight
+      const spans = Math.ceil(height / 10)
+      setSpan(spans)
+    }
+
+    if (imgRef && imgRef.current) {
+      imgRef.current.addEventListener('load', setSpans)
+    }
+  }, [imgRef, span])
 
   return (
-    <>
-      {/* form input */}
-      <Input placeholder="Search" required value={search} onChange={handleSearch} />
-
-      {/* data list */}
-      {image &&
-        image.map((item, index) => (
-          <img
-            key={index}
-            src={item.urls.regular}
-            alt={item.alt_description}
-            style={{
-              // inline style <img />
-              height: '200px',
-              width: 'auto',
-              objectFit: 'cover',
-              flexShrink: 0,
-              marginRight: '8px',
-              marginBottom: '8px',
-            }}
-          />
-        ))}
-    </>
+    <img
+      ref={imgRef}
+      src={image.urls.regular}
+      alt={image.alt_description}
+      style={{
+        width: '100%',
+        gridRowEnd: `span ${span}`,
+      }}
+    />
   )
 }
-
-export default UnsplashSearch
 ```
