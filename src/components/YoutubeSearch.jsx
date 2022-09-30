@@ -55,14 +55,6 @@ const YoutubeSearch = () => {
         </form>
       </Stack>
 
-      {/* data video list */}
-      {video > 0 && (
-        <Stack direction="row" spacing={4} sx={{ height: '100vh', width: '100%' }}>
-          <VideoDetail video={selectedVideo} />
-          <VideoList video={video} handleSelect={handleSelectVideo} />
-        </Stack>
-      )}
-
       {/* error message */}
       {messages && (
         <Typography variant="body2" color="text.secondary" component="div">
@@ -70,6 +62,13 @@ const YoutubeSearch = () => {
           <a href="https://developers.google.com/youtube/v3/getting-started#quota">quota</a>
         </Typography>
       )}
+      
+      {/* data video list */}
+      <Stack direction="row" spacing={4} sx={{ height: '100vh', width: '100%' }}>
+        <VideoDetail video={selectedVideo} />
+        <VideoList video={video} handleSelect={handleSelectVideo} />
+      </Stack>
+
     </Stack>
   )
 }
