@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // Replace key with your own KEY
 // https://developers.google.com/youtube/v3/docs
-const KEY = 'AIzaSyCcTLlwgMgA7wincmlSjAAdLjwetSKjv5M'
+const KEY = 'YOUR_API_KEY'
 
 const youtube = axios.create({
   baseURL: 'https://www.googleapis.com/youtube/v3',
