@@ -7,6 +7,7 @@ import TimerClass from '../components/TimerClass'
 import RealTimeClock from '../components/RealTimeClock'
 import FormInput from '../components/FormInput'
 import UnsplashSearch from '../components/UnsplashSearch'
+import FunctionHooks from '../components/FunctionHooks'
 
 // ---------------------------------------------------------------------
 
@@ -28,9 +29,29 @@ const Home = () => {
         <Card variant="outlined">
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
+              Real Time Clock
+            </Typography>
+            {/* RealTimeClock component */}
+            <RealTimeClock />
+          </CardContent>
+        </Card>
+
+        <Card variant="outlined">
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Function Hoooks
+            </Typography>
+            {/* FunctionHooks component */}
+            <FunctionHooks />
+          </CardContent>
+        </Card>
+
+        <Card variant="outlined">
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
               Unsplash search
             </Typography>
-            {/* FormInput component */}
+            {/* UnsplashSearch component */}
             <UnsplashSearch />
           </CardContent>
         </Card>
@@ -42,16 +63,6 @@ const Home = () => {
             </Typography>
             {/* FormInput component */}
             <FormInput />
-          </CardContent>
-        </Card>
-
-        <Card variant="outlined">
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Real Time Clock
-            </Typography>
-            {/* RealTimeClock component */}
-            <RealTimeClock />
           </CardContent>
         </Card>
 
