@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Box, Stack, TextField, Typography } from '@mui/material'
 // service API
 import youtubeAPI from '../services/youtubeAPI'
-//
+// Youtube component
 import VideoDetail from './youtube/VideoDetail'
 import VideoList from './youtube/VideoList'
 import YoutubeIcon from './youtube/YoutubeIcon'
@@ -22,7 +22,7 @@ const YoutubeSearch = () => {
   const getSearch = async (e) => {
     try {
       e.preventDefault()
-      // get video data from youtube APIs
+      // get video data from youtube APIs by query (q)
       const { data } = await youtubeAPI.get('/search', { params: { q: search } })
       // set video data from youtubeAPI.get
       setVideo(data.items)
@@ -44,6 +44,7 @@ const YoutubeSearch = () => {
         <Box sx={{ height: '40px' }}>
           <YoutubeIcon />
         </Box>
+        {/* search form */}
         <form onSubmit={getSearch} style={{ width: '100%' }}>
           <TextField
             label="Search"
@@ -62,13 +63,14 @@ const YoutubeSearch = () => {
           <a href="https://developers.google.com/youtube/v3/getting-started#quota">quota</a>
         </Typography>
       )}
-      
+
       {/* data video list */}
       <Stack direction="row" spacing={4} sx={{ height: '100vh', width: '100%' }}>
+        {/* video detail component */}
         <VideoDetail video={selectedVideo} />
+        {/* video list component */}
         <VideoList video={video} handleSelect={handleSelectVideo} />
       </Stack>
-
     </Stack>
   )
 }
