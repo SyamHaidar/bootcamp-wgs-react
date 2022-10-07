@@ -8,6 +8,7 @@ import RealTimeClock from '../components/RealTimeClock'
 import FormInput from '../components/FormInput'
 import UnsplashSearch from '../components/UnsplashSearch'
 import FunctionHooks from '../components/FunctionHooks'
+import ReduxCounter from '../components/ReduxCounter'
 
 // ---------------------------------------------------------------------
 
@@ -26,6 +27,16 @@ const Home = () => {
       />
 
       <Stack direction="column" spacing={2}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Redux Counter
+            </Typography>
+            {/* ReduxCounter component */}
+            <ReduxCounter />
+          </CardContent>
+        </Card>
+
         <Card variant="outlined">
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">

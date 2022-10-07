@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Today lesson
 
-- Function Hooks
+- Redux
 
 ### Demo page
 
