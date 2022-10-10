@@ -1,5 +1,6 @@
 // redux
 import { useDispatch, useSelector } from 'react-redux'
+import { decrement, increment, reset } from '../redux/actions'
 // @mui
 import { Button, Stack, Typography } from '@mui/material'
 
@@ -15,15 +16,15 @@ const ReduxCounter = () => {
     <Stack direction="row" alignItems="center" spacing={8}>
       <Stack direction="column" spacing={2}>
         {/* counter + 1 */}
-        <Button onClick={() => dispatch({ type: 'INCREMENT' })} variant="outlined">
+        <Button onClick={() => dispatch(increment())} variant="outlined">
           INCREMENT
         </Button>
         {/* counter - 1 */}
-        <Button onClick={() => dispatch({ type: 'DECREMENT' })} variant="outlined">
+        <Button onClick={() => dispatch(decrement())} variant="outlined">
           DECREMENT
         </Button>
         {/* counter = 0 */}
-        <Button onClick={() => dispatch({ type: 'RESET' })} variant="outlined" color="error">
+        <Button onClick={() => dispatch(reset())} variant="outlined" color="error">
           RESET
         </Button>
       </Stack>

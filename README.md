@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Today lesson
 
-- Redux
+- Redux get APIs
 
 ### Demo page
 

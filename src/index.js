@@ -4,13 +4,10 @@ import App from './App'
 
 // redux
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import rootReducer from './redux/rootReducer'
-
-// redux store
-const store = createStore(rootReducer)
+import { store } from './redux/store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
+
 root.render(
   <React.StrictMode>
     {/* wrapping application <Provider> component to make the store available */}
