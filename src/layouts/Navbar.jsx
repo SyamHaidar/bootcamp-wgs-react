@@ -7,11 +7,13 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   const MENU = [
     { to: '/', name: 'Home' },
+    { to: '/form', name: 'Form' },
     { to: '/forum', name: 'Forum' },
     { to: '/youtube', name: 'Yotube' },
     { to: '/about', name: 'About' },
     { to: '/contact', name: 'Contact' },
   ]
+
   return (
     <Box
       sx={{

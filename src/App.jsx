@@ -9,6 +9,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Youtube from './pages/Youtube'
 import Forum from './pages/Forum'
+import FinalForum from './pages/FinalForm'
 
 // ---------------------------------------------------------------------
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/youtube" element={<Youtube />} />
             <Route path="/forum" element={<Forum />} />
+            <Route path="/Form" element={<FinalForum />} />
           </Routes>
         </div>
       </Router>
