@@ -16,7 +16,7 @@ const EmployeeForm = () => {
       <h1>Employee Form</h1>
       <Form
         onSubmit={onSubmit}
-        initialValues={{ stooge: 'larry', employed: false }}
+        initialValues={{ employed: false }}
         render={({ handleSubmit, form, submitting, pristine, values }) => (
           <form onSubmit={handleSubmit}>
             <div>
@@ -50,13 +50,15 @@ const EmployeeForm = () => {
                   <Field name="expertise" component="input" type="checkbox" value="cs" /> CSS
                 </label>
                 <label>
-                  <Field name="expertise" component="input" type="checkbox" value="javascript" /> Javascript
+                  <Field name="expertise" component="input" type="checkbox" value="javascript" />{' '}
+                  Javascript
                 </label>
                 <label>
                   <Field name="expertise" component="input" type="checkbox" value="nodejs" /> NodeJS
                 </label>
                 <label>
-                  <Field name="expertise" component="input" type="checkbox" value="reactjs" /> ReactJS
+                  <Field name="expertise" component="input" type="checkbox" value="reactjs" />{' '}
+                  ReactJS
                 </label>
               </div>
             </div>
@@ -70,7 +72,8 @@ const EmployeeForm = () => {
                   <Field name="stooge" component="input" type="radio" value="Back End" /> Back End
                 </label>
                 <label>
-                  <Field name="stooge" component="input" type="radio" value="Full Stack" /> Full Stack
+                  <Field name="stooge" component="input" type="radio" value="Full Stack" /> Full
+                  Stack
                 </label>
               </div>
             </div>
