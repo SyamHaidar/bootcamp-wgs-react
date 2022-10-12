@@ -1,13 +1,24 @@
-import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
+import { useDispatch } from 'react-redux'
+// redux form action
+import { submitForm } from '../../redux/actions/formAction'
+// style
+import Styles from './Styles'
 
 // ---------------------------------------------------------------------
 
 const EmployeeForm = () => {
+  // useDispatch()
+  const dispatch = useDispatch()
+
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
   const onSubmit = async (values) => {
     await sleep(300)
+
+    // on submit send values to form reducer
+    dispatch(submitForm(values))
+    
     window.alert(JSON.stringify(values, 0, 2))
   }
 
@@ -33,7 +44,7 @@ const EmployeeForm = () => {
             </div>
             <div>
               <label>Education</label>
-              <Field name="favoriteColor" component="select">
+              <Field name="education" component="select">
                 <option />
                 <option value="high school">High School</option>
                 <option value="bachelor">Bachelor</option>

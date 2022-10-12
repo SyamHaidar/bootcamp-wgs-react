@@ -24,16 +24,3 @@ export const fetchUser = (id) => async (dispatch) => {
 
   dispatch({ type: 'FETCH_USER', payload: data })
 }
-
-// counter
-export const increment = () => {
-  return { type: 'INCREMENT' }
-}
-
-export const decrement = () => {
-  return { type: 'DECREMENT' }
-}
-
-export const reset = () => {
-  return { type: 'RESET' }
-}

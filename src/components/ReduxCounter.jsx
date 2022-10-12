@@ -1,6 +1,6 @@
 // redux
 import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment, reset } from '../redux/actions'
+import { decrement, increment, reset } from '../redux/actions/counterAction'
 // @mui
 import { Button, Stack, Typography } from '@mui/material'
 

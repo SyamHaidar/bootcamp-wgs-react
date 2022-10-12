@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker'
 // redux
 import { useDispatch, useSelector } from 'react-redux'
 // redux actions
-import { fetchPosts } from '../../redux/actions'
+import { fetchPosts } from '../../redux/actions/forumAction'
 // @mui
 import { Avatar, Box, Divider, Stack, Typography } from '@mui/material'
 //

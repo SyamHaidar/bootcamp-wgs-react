@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 // redux
 import { useDispatch, useSelector } from 'react-redux'
 // redux actions
-import { fetchUser } from '../../redux/actions'
+import { fetchUser } from '../../redux/actions/forumAction'
 // @mui
 import { Stack, Typography } from '@mui/material'
 
