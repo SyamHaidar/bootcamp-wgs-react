@@ -1,4 +1,4 @@
-import { Card, CardContent, Stack, Typography } from '@mui/material'
+import { Box, Card, CardContent, Stack, Typography } from '@mui/material'
 // component
 import Comment from '../components/Comment'
 import User from '../components/User'
@@ -15,11 +15,15 @@ import ReduxCounter from '../components/ReduxCounter'
 const Home = () => {
   return (
     <>
-      <h2>Bootcamp Batch 3</h2>
-      <span>Syam Haidar</span>
+      <Typography gutterBottom variant="h3" component="div">
+        Bootcamp Batch 3
+      </Typography>
+      <Typography variant="h5" component="span">
+        Syam Haidar
+      </Typography>
 
-      <div
-        style={{
+      <Box
+        sx={{
           borderBottom: '1px solid #444',
           width: '35%',
           margin: '40px 0',

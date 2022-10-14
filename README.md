@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Today lesson
 
-- Redux Form / React Final Form
+- Redux Form Rest API with local data (json-server)
 
 ### Demo page
 

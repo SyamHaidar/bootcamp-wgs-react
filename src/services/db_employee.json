@@ -1,0 +1,77 @@
+{
+  "employee": [
+    {
+      "employed": true,
+      "firstName": "Syam",
+      "lastName": "Haidar",
+      "education": "bachelor",
+      "expertise": [
+        "html",
+        "css",
+        "javascript",
+        "nodejs",
+        "reactjs"
+      ],
+      "technology": "Full Stack",
+      "notes": "Yo!",
+      "id": 1
+    },
+    {
+      "employed": true,
+      "firstName": "Aditya",
+      "lastName": "Kunto",
+      "education": "bachelor",
+      "expertise": [
+        "html",
+        "css",
+        "javascript",
+        "nodejs",
+        "reactjs"
+      ],
+      "technology": "Full Stack",
+      "notes": "I'm mentor",
+      "id": 2
+    },
+    {
+      "employed": true,
+      "firstName": "Baby",
+      "lastName": "Boss",
+      "education": "bachelor",
+      "expertise": [
+        "html",
+        "css",
+        "javascript",
+        "nodejs",
+        "reactjs"
+      ],
+      "technology": "Full Stack",
+      "notes": "Gugu gaga",
+      "id": 3
+    },
+    {
+      "employed": true,
+      "lastName": "Monkey",
+      "firstName": "Lufi",
+      "technology": "Back End",
+      "expertise": [
+        "nodejs"
+      ],
+      "education": "master",
+      "notes": "Duh",
+      "id": 4
+    },
+    {
+      "employed": true,
+      "firstName": "barudak",
+      "lastName": "WGS",
+      "education": "bachelor",
+      "expertise": [
+        "reactjs",
+        "nodejs"
+      ],
+      "technology": "Full Stack",
+      "notes": "Mantap",
+      "id": 5
+    }
+  ]
+}
