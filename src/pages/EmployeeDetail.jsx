@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 // redux actions
 import { getEmployee } from '../redux/actions/employeeAction'
 // @mui
-import { Avatar, Box, Divider, Stack, Typography } from '@mui/material'
+import { Avatar, Stack, Typography } from '@mui/material'
 
 // ---------------------------------------------------------------------
 
