@@ -6,13 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Today lesson
 
-- Redux Form Rest API with local data (json-server)
-
-Test program
-
-- instal json-server `npm install -g json-server`
-- run server for local server `npm run server`
-- then run `npm run start` to test program
+- React create portal
 
 ### Demo page
 
