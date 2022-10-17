@@ -1,4 +1,4 @@
-import YoutubeSearch from '../components/YoutubeSearch'
+import YoutubeSearch from '../components/youtube/YoutubeSearch'
 
 // ----------------------------------------------------------------------
 

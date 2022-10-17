@@ -2,11 +2,11 @@ import { useState } from 'react'
 // style
 import { Box, Stack, TextField, Typography } from '@mui/material'
 // service API
-import youtubeAPI from '../services/youtubeAPI'
+import youtubeAPI from '../../services/youtubeAPI'
 // Youtube component
-import VideoDetail from './youtube/VideoDetail'
-import VideoList from './youtube/VideoList'
-import YoutubeIcon from './youtube/YoutubeIcon'
+import VideoDetail from './VideoDetail'
+import VideoList from './VideoList'
+import YoutubeIcon from './YoutubeIcon'
 
 // ---------------------------------------------------------------------
 

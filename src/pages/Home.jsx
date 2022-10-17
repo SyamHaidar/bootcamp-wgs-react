@@ -1,14 +1,15 @@
 import { Box, Card, CardContent, Stack, Typography } from '@mui/material'
 // component
-import Comment from '../components/Comment'
+import Comment from '../components/comment/Comment'
 import User from '../components/User'
-import TimerHooks from '../components/TimerHooks'
-import TimerClass from '../components/TimerClass'
+import TimerHooks from '../components/timer/TimerHooks'
+import TimerClass from '../components/timer/TimerClass'
 import RealTimeClock from '../components/RealTimeClock'
 import FormInput from '../components/FormInput'
 import UnsplashSearch from '../components/UnsplashSearch'
 import FunctionHooks from '../components/FunctionHooks'
 import ReduxCounter from '../components/ReduxCounter'
+import ModalTest from '../components/modal/ModalTest'
 
 // ---------------------------------------------------------------------
 
@@ -31,6 +32,16 @@ const Home = () => {
       />
 
       <Stack direction="column" spacing={2}>
+        <Card variant="outlined">
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Modal portal
+            </Typography>
+            {/* Modal component */}
+            <ModalTest />
+          </CardContent>
+        </Card>
+
         <Card variant="outlined">
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
